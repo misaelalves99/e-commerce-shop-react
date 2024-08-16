@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+
+/* SECTION DESTAQUE */
+
+.section-emphasis {
+    width: 100%;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #F2F2F2;
+}
+
+.container-products-emphasis {
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+@media (max-width: 1280px) {
+    .container-products-emphasis {
+        max-width: 1024px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container-products-emphasis {
+        max-width: 768px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-products-emphasis {
+        max-width: 576px;
+    }
+}
+
+.emphasis-title {
+    padding-bottom: 50px;
+}
+
+.emphasis-title h1 {
+    color: rgb(0, 44, 166);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.emphasis-title h2 {
+    margin-top: 7px;
+    color: black;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.emphasis-items {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    place-items: center;
+    gap: 1.25rem;
+    
+}
+
+@media (max-width: 1280px) {
+    .emphasis-items {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1024px) {
+    .emphasis-items {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .emphasis-items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
