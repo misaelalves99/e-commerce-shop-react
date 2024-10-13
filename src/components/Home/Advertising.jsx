@@ -1,5 +1,5 @@
 import '../Home/Advertising.css';
-import Fade from 'react-reveal';
+// import Fade from 'react-reveal';
 import Typical from 'react-typical';
 import ImgProp from '../../assets/img-propaganda.png';
 
@@ -8,7 +8,7 @@ export default function Advertising() {
         <>
             <section className='section-advertising'>
                 <div className='container-advertising'>
-                    <Fade bottom duration={2000} distance="40px">
+                    {/* <Fade bottom duration={2000} distance="40px"> */}
                         <div className='advertising'>
                             <h1>até 50% de desconto e com muitas promoções.</h1>
                             <br />
@@ -29,7 +29,7 @@ export default function Advertising() {
                         <div className='img-advertising'>
                             <img src={ImgProp} alt={ImgProp} />
                         </div>
-                    </Fade>
+                    {/* </Fade> */}
                 </div>
             </section>
         </>

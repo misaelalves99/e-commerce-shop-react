@@ -72,13 +72,13 @@ export default function Header() {
                         </div>
                         <div className='user'>
                             <div className='cart-user'>
-                                <Link><FaCartPlus /></Link>
+                                <Link to="/cart"><FaCartPlus /></Link>
                             </div>
                             <div className='favorites-user'>
-                                <Link><MdFavorite /></Link>
+                                <Link to="favorites"><MdFavorite /></Link>
                             </div>
                             <div className='profile-user'>
-                                <Link><FaUser /></Link>
+                                <Link to="profile"><FaUser /></Link>
                             </div>
                         </div>
                     </div>

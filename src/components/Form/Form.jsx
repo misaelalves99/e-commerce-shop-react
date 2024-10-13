@@ -1,10 +1,10 @@
 import '../Form/Form.css';
-import Fade from 'react-reveal';
+// import Fade from 'react-reveal';
 
 export default function Form() {
     return (
         <section className='section-form'>
-            <Fade bottom duration={2000} distance="40px">
+            {/* <Fade bottom duration={2000} distance="40px"> */}
                 <div className='container-form'>
                     <div className='container-title'>
                         <h1 className='form-title'>CONTATE-NOS</h1>
@@ -26,7 +26,7 @@ export default function Form() {
                         </form>
                     </div>
                 </div>
-            </Fade>
+            {/* </Fade> */}
         </section>
     )
 }

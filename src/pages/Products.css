@@ -1,0 +1,136 @@
+/* Estilos gerais */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Container da lista de categorias */
+.filter-category {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.list-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title-category h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.input-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.category-label-container {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-label-container:hover {
+  border-color: #007bff;
+  background-color: #e9f7ff;
+}
+
+.icon-category {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.input-category {
+  margin-right: 10px;
+}
+
+.name-category {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Lista de produtos */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+/* Estilos para cada Card de produto */
+.item-products {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.item-products:hover {
+  transform: translateY(-5px);
+}
+
+.img-item {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.title-item {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.rating {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.price-old-discount,
+.discount {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.cart {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.button-cart {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-cart:hover {
+  background-color: #0056b3;
+}

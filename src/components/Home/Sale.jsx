@@ -10,12 +10,12 @@ export default function Sale() {
         <>
             <section className="section-sale">
                 <div className="container-sale">
-                    <Fade bottom duration={2000} distance="40px">
+                    {/* <Fade bottom duration={2000} distance="40px"> */}
                         <div className="off-sale">
                             <img src={ImgSale} alt={ImgSale} />
                         </div>
-                    </Fade>
-                    <Fade bottom duration={2000} distance="40px">
+                    {/* </Fade> */}
+                    {/* <Fade bottom duration={2000} distance="40px"> */}
                         <div className="info-sale">
                             <div className="title-desc">
                                 <h1>Aproveite a oferta até 50% de desconto</h1>
@@ -40,7 +40,7 @@ export default function Sale() {
                                 </div>
                             </div>
                         </div>
-                    </Fade>
+                    {/* </Fade> */}
                 </div>
                 
             </section>
