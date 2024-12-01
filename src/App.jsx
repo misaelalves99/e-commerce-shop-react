@@ -2,6 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
+import ProductDetail from "./pages/ProductDetail";
+import Register from "./components/Register/Register";
+import Login from "./components/Login/Login";
+import Orders from "./components/Orders/Orders";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
 import Favorites from "./pages/Favorites";
@@ -16,6 +20,10 @@ function App() {
                 <Routes>
                     <Route path="/" element={ <Home /> } />
                     <Route path="/produtos" element={<Products />} />
+                    <Route path="/login" element={ <Login /> }/>
+                    <Route path="/register" element={ <Register /> }/>
+                    <Route path="/orders" element={ <Orders /> }/>
+                    <Route path="/detail" element={ <ProductDetail /> }/>
                     <Route path="/cart" element={<Cart />} />
                     <Route path="/favorites" element={ <Favorites /> }/>
                     <Route path="/contato" element={ <Contact /> }/>
