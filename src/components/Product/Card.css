@@ -14,11 +14,11 @@
     flex-direction: column;
     background-color: #fff;
     border-radius: 8px;
-    overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
     max-width: 300px;
     width: 100%;
+    position: relative; /* Importante para o posicionamento do botão de favoritos */
 }
 
 .card-item:hover {
@@ -77,6 +77,20 @@
     margin-top: 10px;
 }
 
+.favorite-btn {
+    position: absolute;
+    top: 10px; /* Ajuste para garantir que o botão não fique colado na borda */
+    right: 10px; /* Ajuste para garantir que o botão fique no canto superior direito */
+    color: #626262;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1; /* Garante que o botão fique acima do card */
+    font-size: 1.5em;
+}
+
 .price {
     font-size: 1.4rem;
     font-weight: bold;
@@ -84,17 +98,13 @@
 }
 
 .cart-btn {
-    background-color: #0000FF;
-    color: #fff;
+    color: #626262;
     border: none;
-    padding: 8px 12px;
+    padding: 4px 8px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-.cart-btn:hover {
-    background-color: rgb(255, 68, 0);
+    font-size: 1.5em;
 }
 
 @media (max-width: 768px) {

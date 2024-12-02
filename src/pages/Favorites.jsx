@@ -1,10 +1,20 @@
-// src/pages/Favorites.jsx
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import AppContext from '../context/AppContext';
 import './Favorites.css';
 
 const Favorites = () => {
-  const { favorites, removeFromFavorites } = useContext(AppContext);
+  const { favorites, removeFromFavorites, setFavorites } = useContext(AppContext);
+
+  useEffect(() => {
+    // Carregar favoritos do localStorage ao montar o componente
+    const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    setFavorites(storedFavorites);
+  }, [setFavorites]);
+
+  useEffect(() => {
+    // Salvar favoritos no localStorage sempre que mudar
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  }, [favorites]);
 
   return (
     <div className="favorites-page">
@@ -15,7 +25,9 @@ const Favorites = () => {
         <ul className="favorites-list">
           {favorites.map((item) => (
             <li key={item.id}>
-              {item.name} - R${item.price.toFixed(2)}
+              <img src={item.image} alt={item.name} />
+              <span>{item.name}</span>
+              <span>R$ {item.price}</span>
               <button onClick={() => removeFromFavorites(item.id)}>Remover</button>
             </li>
           ))}

@@ -1,23 +1,37 @@
-// src/components/Product/Card.jsx
 import React, { useContext } from 'react';
 import AppContext from '../../context/AppContext';
 import './Card.css';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { MdFavoriteBorder } from "react-icons/md";
+import { FaCartPlus } from "react-icons/fa";
 
 const Card = ({ product }) => {
-    const { addToCart } = useContext(AppContext);
+    const { addToCart, addToFavorites } = useContext(AppContext);
     const navigate = useNavigate();
 
     const handleAddToCart = () => {
         addToCart(product);
-        navigate('/cart');  // Navega para a página do carrinho
+        navigate('/cart'); // Navega para a página do carrinho
+    };
+
+    const handleAddToFavorites = (e) => {
+        e.preventDefault(); // Previne o comportamento padrão
+        addToFavorites(product); // Adiciona o produto aos favoritos
     };
 
     return (
         <div className="card-container">
             <Link to="/detail">
                 <div className="card-item">
+                    <div className="actions">
+                        <button 
+                            onClick={(e) => handleAddToFavorites(e)} // Passando o evento corretamente
+                            className="favorite-btn"
+                        >
+                            <MdFavoriteBorder />
+                        </button>
+                    </div>
                     <div className="img-item">
                         <img src={product.images} alt={product.title} />
                     </div>
@@ -32,7 +46,9 @@ const Card = ({ product }) => {
                         </div>
                         <div className="actions">
                             <span className="price">{product.price}</span>
-                            <button onClick={handleAddToCart} className="cart-btn">🛒</button>
+                            <button onClick={handleAddToCart} className="cart-btn">
+                                <FaCartPlus />
+                            </button>
                         </div>
                     </div>
                 </div>
