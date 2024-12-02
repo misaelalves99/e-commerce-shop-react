@@ -1,29 +1,41 @@
 import '../Header/Header.css';
-import React, { useState } from 'react';
-import { FaShoppingBag } from "react-icons/fa";
-import { FaSearch } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import { FaCartPlus } from "react-icons/fa";
-import { MdFavorite } from "react-icons/md";
-import { FaUser } from "react-icons/fa";
+import React, { useState, useContext, useEffect } from 'react';
+import { FaSearch, FaCartPlus, FaUser } from 'react-icons/fa';
+import { MdFavorite } from 'react-icons/md';
+import { Link, useNavigate } from 'react-router-dom';
 import Modal from '../Modal/Modal';
+import AppContext from '../../context/AppContext';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [showModal, setShowModal] = useState(false);
+    const [isAuthenticated, setIsAuthenticated] = useState(true);
+    const navigate = useNavigate();
+    const { cart, favorites } = useContext(AppContext);
+
+    useEffect(() => {
+        console.log(`Carrinho atualizado: ${cart.length} itens`);
+    }, [cart]);
+    
+    useEffect(() => {
+        console.log(`Favoritos atualizados: ${favorites.length} itens`);
+    }, [favorites]);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
-    // Função para abrir o modal quando passar o mouse sobre o perfil
     const handleMouseEnter = () => {
         setShowModal(true);
     };
 
-    // Função para fechar o modal ao retirar o mouse tanto do perfil quanto do modal
     const handleMouseLeave = () => {
         setShowModal(false);
+    };
+
+    const handleLogout = () => {
+        setIsAuthenticated(false);
+        navigate('/login');
     };
 
     return (
@@ -32,24 +44,32 @@ export default function Header() {
                 <div className="bar1">
                     <div className="bar1-container">
                         <div className='logo'>
-                            <a href="/">
+                            <Link to="/">
                                 <FaCartPlus className="icon-logo" />
                                 <h1>E-Commerce Shop</h1>
-                            </a>
+                            </Link>
                         </div>
                         <div className='user'>
                             <div className='cart-user'>
-                                <Link to="/cart"><FaCartPlus /></Link>
+                                <div>
+                                    <Link to="/cart"><FaCartPlus /></Link>
+                                    {cart.length > 0 && <span className="cart-counter">{cart.length}</span>}
+                                </div>
                             </div>
                             <div className='favorites-user'>
-                                <Link to="/favorites"><MdFavorite /></Link>
+                                <div>
+                                    <Link to="/favorites"><MdFavorite /></Link>
+                                    {favorites.length > 0 && <span className="favorite-counter">{favorites.length}</span>}
+                                </div>
                             </div>
                             <div className='profile-user' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                                 <Link><FaUser /></Link>
-                                {/* Exibe o modal enquanto o mouse estiver em cima */}
                                 {showModal && (
                                     <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                                        <Modal />
+                                        <Modal
+                                            isAuthenticated={isAuthenticated}
+                                            onLogout={handleLogout}
+                                        />
                                     </div>
                                 )}
                             </div>

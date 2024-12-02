@@ -2,12 +2,20 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import './Modal.css';
 
-function Modal() {
+function Modal({ isAuthenticated, onLogout }) {
   return (
     <div className="modal">
       <div className="modal-content">
-        <Link to="/login"><li>Entre ou cadastre-se</li></Link>
-        <Link to="/orders"><li>Meus pedidos</li></Link>
+        {isAuthenticated ? (
+          <>
+            <Link to="/orders"><li>Meus pedidos</li></Link>
+            <li>
+              <button onClick={onLogout} className="logout-btn">Sair</button>
+            </li>
+          </>
+        ) : (
+          <Link to="/login"><li>Entre ou cadastre-se</li></Link>
+        )}
       </div>
     </div>
   );

@@ -81,15 +81,13 @@
     border-radius: 100%;
     padding: 7px;
     background-color: #f4ca9e;
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     transition: transform 0.3s ease;
-}
-
-.cart-user:hover {
-    transform: scale(1.1);
+    position: relative; /* Permite o posicionamento do contador */
+    display: inline-block; /* Garante que o ícone e o contador sejam tratados como uma unidade */
 }
 
 .cart-user a {
@@ -97,6 +95,29 @@
     font-size: 2rem;
     display: flex;
     align-items: center;
+}
+
+.cart-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+}
+
+.cart-counter {
+    position: absolute;
+    top: -8px; /* Ajuste conforme necessário */
+    right: -8px; /* Ajuste conforme necessário */
+    background-color: red; /* Cor do fundo do contador */
+    color: white; /* Cor do texto */
+    font-size: 12px; /* Tamanho da fonte do contador */
+    font-weight: bold; /* Negrito no texto */
+    border-radius: 50%; /* Forma circular */
+    padding: 2px 6px; /* Espaçamento interno */
+    min-width: 20px; /* Largura mínima */
+    text-align: center; /* Centraliza o número */
+    z-index: 10; /* Garante que fique acima de outros elementos */
 }
 
 @media (max-width: 768px) {
@@ -111,21 +132,24 @@
     }
 }
 
+@media (max-width: 768px) {
+    .cart-counter {
+        top: -6px; /* Ajuste para telas pequenas */
+        right: -6px;
+        font-size: 10px; /* Tamanho menor do texto */
+        min-width: 16px; /* Tamanho menor do contador */
+    }
+}
+
 .favorites-user {
     margin-left: 10px;
     margin-right: 10px;
     padding: 7px;
     border-radius: 100%;
     background-color: #f4ca9e;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    position: relative; /* Define um contexto de posicionamento para o modal */
+    display: inline-block;
     transition: transform 0.3s ease;
-}
-
-.favorites-user:hover {
-    transform: scale(1.1);
 }
 
 .favorites-user a {
@@ -133,6 +157,29 @@
     font-size: 2rem;
     display: flex;
     align-items: center;
+}
+
+.cart-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+}
+
+.favorite-counter {
+    position: absolute;
+    top: -8px; /* Ajuste conforme necessário */
+    right: -8px; /* Ajuste conforme necessário */
+    background-color: red; /* Cor do fundo do contador */
+    color: white; /* Cor do texto */
+    font-size: 12px; /* Tamanho da fonte do contador */
+    font-weight: bold; /* Negrito no texto */
+    border-radius: 50%; /* Forma circular */
+    padding: 2px 6px; /* Espaçamento interno */
+    min-width: 20px; /* Largura mínima */
+    text-align: center; /* Centraliza o número */
+    z-index: 10; /* Garante que fique acima de outros elementos */
 }
 
 @media (max-width: 768px) {
@@ -160,8 +207,8 @@
     transition: transform 0.3s ease;
 }
 
-.profile-user:hover {
-    transform: scale(1.1);
+.profile-user:hover .modal {
+    display: block; /* Mostra o modal quando o mouse passa por cima */
 }
 
 .profile-user a {
@@ -180,6 +227,28 @@
 
     .profile-user a {
         font-size: 1.7rem;
+    }
+}
+
+.modal {
+    position: absolute;
+    top: 100%; /* Coloca o modal logo abaixo do ícone */
+    left: 85%; /* Centraliza o modal horizontalmente em relação ao ícone */
+    transform: translateX(-50%); /* Ajusta para alinhar no centro */
+    background-color: white; /* Cor de fundo do modal */
+    border: 1px solid #ddd; /* Borda do modal */
+    border-radius: 5px; /* Borda arredondada */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    padding: 10px; /* Espaçamento interno */
+    z-index: 100; /* Garante que o modal fique acima de outros elementos */
+    display: none; /* Esconde o modal por padrão */
+}
+
+@media (max-width: 768px) {
+    .modal {
+        width: 90%; /* Ajusta a largura para telas pequenas */
+        left: 5%; /* Centraliza dentro da tela menor */
+        transform: translateX(0); /* Remove o ajuste central em telas pequenas */
     }
 }
 
