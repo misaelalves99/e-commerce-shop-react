@@ -1,5 +1,6 @@
 // src/components/Register.jsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Register.css';
 
 const Register = () => {
@@ -13,6 +14,8 @@ const Register = () => {
     password: '',
   });
 
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
@@ -20,8 +23,9 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form data:', formData);
-    // Aqui você pode adicionar a lógica para enviar o formulário
+    localStorage.setItem('user', JSON.stringify(formData));
+    alert('Cadastro realizado com sucesso!');
+    navigate('/login');
   };
 
   return (
