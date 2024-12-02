@@ -1,12 +1,11 @@
 // src/components/Login.jsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-  });
+  const [formData, setFormData] = useState({ email: '', password: '' });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -15,18 +14,14 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Login data:', formData);
-    // Aqui você pode adicionar a lógica para enviar o formulário de login
-  };
-
-  const handleGoogleLogin = () => {
-    console.log('Login com Google');
-    // Lógica para login com Google
-  };
-
-  const handleFacebookLogin = () => {
-    console.log('Login com Facebook');
-    // Lógica para login com Facebook
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user?.email === formData.email && user?.password === formData.password) {
+      localStorage.setItem('auth', true);
+      alert('Login realizado com sucesso!');
+      navigate('/');
+    } else {
+      alert('Email ou senha inválidos.');
+    }
   };
 
   return (
@@ -56,8 +51,8 @@ const Login = () => {
           Não tem cadastro? <a href="/register">Cadastre-se</a>
         </p>
         <div className="social-login">
-          <button type="button" onClick={handleGoogleLogin} className="google-btn">Entrar com Google</button>
-          <button type="button" onClick={handleFacebookLogin} className="facebook-btn">Entrar com Facebook</button>
+          <button type="button" className="google-btn">Entrar com Google</button>
+          <button type="button" className="facebook-btn">Entrar com Facebook</button>
         </div>
       </form>
     </div>
