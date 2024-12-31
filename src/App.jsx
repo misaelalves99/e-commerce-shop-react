@@ -23,7 +23,7 @@ function App() {
                     <Route path="/login" element={ <Login /> }/>
                     <Route path="/register" element={ <Register /> }/>
                     <Route path="/orders" element={ <Orders /> }/>
-                    <Route path="/detail" element={ <ProductDetail /> }/>
+                    <Route path="/detail/:id" element={ <ProductDetail /> }/>
                     <Route path="/cart" element={<Cart />} />
                     <Route path="/favorites" element={ <Favorites /> }/>
                     <Route path="/contato" element={ <Contact /> }/>

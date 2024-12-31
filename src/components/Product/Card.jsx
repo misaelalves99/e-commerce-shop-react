@@ -22,7 +22,7 @@ const Card = ({ product }) => {
 
     return (
         <div className="card-container">
-            <Link to="/detail">
+            <Link to={`/detail/${product.id}`}>
                 <div className="card-item">
                     <div className="actions">
                         <button 
@@ -33,7 +33,7 @@ const Card = ({ product }) => {
                         </button>
                     </div>
                     <div className="img-item">
-                        <img src={product.images} alt={product.title} />
+                        <img src={product.mainImage} alt={product.title} />
                     </div>
                     <div className="info-item">
                         <h3 className="title-item">{product.title}</h3>
