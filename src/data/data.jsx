@@ -79,7 +79,8 @@ export const CardProdDt = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Computadores5,
+        mainImage: Computadores5,
+        images: [Computadores5, Computadores5, Computadores5],
         price: "R$ 2199,00"
     },
     
@@ -89,7 +90,8 @@ export const CardProdDt = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Fones5,
+        mainImage: Fones5,
+        images: [Fones5, Fones5, Fones5],
         price: "R$ 215,90"
     },
 
@@ -99,7 +101,8 @@ export const CardProdDt = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Roupas3,
+        mainImage: Roupas3,
+        images: [Roupas3, Roupas3, Roupas3],
         price: "R$ 94,99"
     },
     
@@ -109,7 +112,8 @@ export const CardProdDt = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Sapatos5,
+        mainImage: Sapatos5,
+        images: [Sapatos5, Sapatos5, Sapatos5],
         price: "R$ 390,50"
     },
 ]
@@ -121,7 +125,8 @@ export const CardProdAv = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Celulares3,
+        mainImage: Celulares3,
+        images: [Celulares3, Celulares3, Celulares3],
         price: "R$ 1720,00"
     },
 
@@ -131,7 +136,8 @@ export const CardProdAv = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Acessorios1,
+        mainImage: Acessorios1,
+        images: [Acessorios1, Acessorios1, Acessorios1],
         price: "R$ 144,00"
     },
 
@@ -141,7 +147,8 @@ export const CardProdAv = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Roupas3,
+        mainImage: Roupas3,
+        images: [Roupas3, Roupas3, Roupas3],
         price: "R$ 94,99"
     },
 
@@ -151,7 +158,8 @@ export const CardProdAv = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Roupas4,
+        mainImage: Roupas4,
+        images: [Roupas4, Roupas4, Roupas4],
         price: "R$ 126,90"
     },
 ]
@@ -217,7 +225,7 @@ export const CardCategories = [
         icon: <FaTabletAlt />
     },
 ];
-
+    
 export const CardProducts = [ 
     {
         id: 1,
@@ -225,57 +233,68 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Roupas1,
+        mainImage: Roupas1, // Imagem principal para o card
+        images: [Roupas1, Roupas1, Roupas1], // Array de imagens para os detalhes
         price: "R$ 74,90",
         category: "Roupas"
     },
+
     {
         id: 2,
         title: "Calsa Jeans",
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Roupas2,
+        mainImage: Roupas2,
+        images: [Roupas2, Roupas2, Roupas2],
         price: "R$ 99,90",
         category: "Roupas"
     },
+
     {
         id: 3,
         title: "Camiseta",
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Roupas3,
+        mainImage: Roupas3,
+        images: [Roupas3, Roupas3, Roupas3],
         price: "R$ 94,99",
         category: "Roupas"
     },
+
     {
         id: 4,
         title: "Vestido",
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Roupas4,
+        mainImage: Roupas4,
+        images: [Roupas4, Roupas4, Roupas4],
         price: "R$ 126,90",
         category: "Roupas"
     },
+
     {
         id: 5,
         title: "Jaqueta Moletom",
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Roupas5,
+        mainImage: Roupas5,
+        images: [Roupas5, Roupas5, Roupas5],
         price: "R$ 75,99",
         category: "Roupas"
     },
+    
     {
         id: 6,
         title: "Bermuda Jeans",
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Roupas6,
+        mainImage: Roupas6,
+        images: [Roupas6, Roupas6, Roupas6],
         price: "R$ 59,90",
         category: "Roupas"
     },
@@ -285,7 +304,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Sapatos1,
+        mainImage: Sapatos1,
+        images: [Sapatos1, Sapatos1, Sapatos1],
         price: "R$ 125,99",
         category: "Sapatos"
     },
@@ -295,7 +315,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Sapatos2,
+        mainImage: Sapatos2,
+        images: [Sapatos2, Sapatos2, Sapatos2],
         price: "R$ 120,90",
         category: "Sapatos"
     },
@@ -305,7 +326,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Sapatos3,
+        mainImage: Sapatos3,
+        images: [Sapatos3, Sapatos3, Sapatos3],
         price: "R$ 110,00",
         category: "Sapatos"
     },
@@ -315,7 +337,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Sapatos4,
+        mainImage: Sapatos4,
+        images: [Sapatos4, Sapatos4, Sapatos4],
         price: "R$ 135,50",
         category: "Sapatos"
     },
@@ -325,7 +348,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Sapatos5,
+        mainImage: Sapatos5,
+        images: [Sapatos5, Sapatos5, Sapatos5],
         price: "R$ 390,50",
         category: "Sapatos"
     },
@@ -335,7 +359,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Sapatos6,
+        mainImage: Sapatos6,
+        images: [Sapatos6, Sapatos6, Sapatos6],
         price: "R$ 80,00",
         category: "Sapatos"
     },
@@ -345,7 +370,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Celulares1,
+        mainImage: Celulares1,
+        images: [Celulares1, Celulares1, Celulares1],
         price: "R$ 930,90",
         category: "Celulares"
     },
@@ -355,7 +381,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Celulares2,
+        mainImage: Celulares2,
+        images: [Celulares2, Celulares2, Celulares2],
         price: "R$ 999,90",
         category: "Celulares"
     },
@@ -365,7 +392,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Celulares3,
+        mainImage: Celulares3,
+        images: [Celulares3, Celulares3, Celulares3],
         price: "R$ 1720,00",
         category: "Celulares"
     },
@@ -375,7 +403,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Celulares4,
+        mainImage: Celulares4,
+        images: [Celulares4, Celulares4, Celulares4],
         price: "R$ 1250,00",
         category: "Celulares"
     },
@@ -385,7 +414,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Celulares5,
+        mainImage: Celulares5,
+        images: [Celulares5, Celulares5, Celulares5],
         price: "R$ 2299,90",
         category: "Celulares"
     },
@@ -395,7 +425,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Celulares6,
+        mainImage: Celulares6,
+        images: [Celulares6, Celulares6, Celulares6],
         price: "R$ 799,90",
         category: "Celulares"
     },
@@ -405,7 +436,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Fones1,
+        mainImage: Fones1,
+        images: [Fones1, Fones1, Fones1],
         price: "R$ 30,00",
         category: "Fones"
     },
@@ -415,7 +447,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Fones2,
+        mainImage: Fones2,
+        images: [Fones2, Fones2, Fones2],
         price: "R$ 125,00",
         category: "Fones"
     },
@@ -425,7 +458,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Fones3,
+        mainImage: Fones3,
+        images: [Fones3, Fones3, Fones3],
         price: "R$ 120,90",
         category: "Fones"
     },
@@ -435,7 +469,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Fones4,
+        mainImage: Fones4,
+        images: [Fones4, Fones4, Fones4],
         price: "R$ 37,90",
         category: "Fones"
     },
@@ -445,7 +480,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Fones5,
+        mainImage: Fones5,
+        images: [Fones5, Fones5, Fones5],
         price: "R$ 215,90",
         category: "Fones"
     },
@@ -455,7 +491,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Fones6,
+        mainImage: Fones6,
+        images: [Fones6, Fones6, Fones6],
         price: "R$ 205,99",
         category: "Fones"
     },
@@ -465,7 +502,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Acessorios1,
+        mainImage: Acessorios1,
+        images: [Acessorios1, Acessorios1, Acessorios1],
         price: "R$ 144,00",
         category: "Acessórios"
     },
@@ -475,7 +513,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Acessorios2,
+        mainImage: Acessorios2,
+        images: [Acessorios2, Acessorios2, Acessorios2],
         price: "R$ 166,00",
         category: "Acessórios"
     },
@@ -485,7 +524,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Acessorios3,
+        mainImage: Acessorios3,
+        images: [Acessorios3, Acessorios3, Acessorios3],
         price: "R$ 80,00",
         category: "Acessórios"
     },
@@ -495,7 +535,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Acessorios4,
+        mainImage: Acessorios4,
+        images: [Acessorios4, Acessorios4, Acessorios4],
         price: "R$ 167,00",
         category: "Acessórios"
     },
@@ -505,7 +546,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Acessorios5,
+        mainImage: Acessorios5,
+        images: [Acessorios5, Acessorios5, Acessorios5],
         price: "R$ 92,90",
         category: "Acessórios"
     },
@@ -515,7 +557,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Acessorios6,
+        mainImage: Acessorios6,
+        images: [Acessorios6, Acessorios6, Acessorios6],
         price: "R$ 123,50",
         category: "Acessórios"
     },
@@ -525,7 +568,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Eletronicos1,
+        mainImage: Eletronicos1,
+        images: [Eletronicos1, Eletronicos1, Eletronicos1],
         price: "R$ 30,00",
         category: "Eletrônicos"
     },
@@ -535,7 +579,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Eletronicos2,
+        mainImage: Eletronicos2,
+        images: [Eletronicos2, Eletronicos2, Eletronicos2],
         price: "R$ 25,00",
         category: "Eletrônicos"
     },
@@ -545,7 +590,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Eletronicos3,
+        mainImage: Eletronicos3,
+        images: [Eletronicos3, Eletronicos3, Eletronicos3],
         price: "R$128,00",
         category: "Eletrônicos"
     },
@@ -555,7 +601,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Eletronicos4,
+        mainImage: Eletronicos4,
+        images: [Eletronicos4, Eletronicos4, Eletronicos4],
         price: "R$ 15,00",
         category: "Eletrônicos"
     },
@@ -565,7 +612,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Eletronicos5,
+        mainImage: Eletronicos5,
+        images: [Eletronicos5, Eletronicos5, Eletronicos5],
         price: "R$ 129,97",
         category: "Eletrônicos"
     },
@@ -575,7 +623,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Eletronicos6,
+        mainImage: Eletronicos6,
+        images: [Eletronicos6, Eletronicos6, Eletronicos6],
         price: "R$ 45,00",
         category: "Eletrônicos"
     },
@@ -585,7 +634,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Brinquedos1,
+        mainImage: Brinquedos1,
+        images: [Brinquedos1, Brinquedos1, Brinquedos1],
         price: "R$ 19,90",
         category: "Brinquedos"
     },
@@ -595,7 +645,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Brinquedos2,
+        mainImage: Brinquedos2,
+        images: [Brinquedos2, Brinquedos2, Brinquedos2],
         price: "R$ 12,50",
         category: "Brinquedos"
     },
@@ -605,7 +656,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Brinquedos3,
+        mainImage: Brinquedos3,
+        images: [Brinquedos3, Brinquedos3, Brinquedos3],
         price: "R$ 42,50",
         category: "Brinquedos"
     },
@@ -615,7 +667,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Brinquedos4,
+        mainImage: Brinquedos4,
+        images: [Brinquedos4, Brinquedos4, Brinquedos4],
         price: "R$ 39,90",
         category: "Brinquedos"
     },
@@ -625,7 +678,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Brinquedos5,
+        mainImage: Brinquedos5,
+        images: [Brinquedos5, Brinquedos5, Brinquedos5],
         price: "R$ 19,99",
         category: "Brinquedos"
     },
@@ -635,7 +689,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Brinquedos6,
+        mainImage: Brinquedos6,
+        images: [Brinquedos6, Brinquedos6, Brinquedos6],
         price: "R$ 66,00",
         category: "Brinquedos"
     },
@@ -645,7 +700,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Computadores1,
+        mainImage: Computadores1,
+        images: [Computadores1, Computadores1, Computadores1],
         price: "R$ 680,00",
         category: "Computadores"
     },
@@ -655,7 +711,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Computadores2,
+        mainImage: Computadores2,
+        images: [Computadores2, Computadores2, Computadores2],
         price: "R$ 1799,00",
         category: "Computadores"
     },
@@ -665,7 +722,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Computadores3,
+        mainImage: Computadores3,
+        images: [Computadores3, Computadores3, Computadores3],
         price: "R$ 1200,00",
         category: "Computadores"
     },
@@ -675,7 +733,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Computadores4,
+        mainImage: Computadores4,
+        images: [Computadores4, Computadores4, Computadores4],
         price: "R$ 599,90",
         category: "Computadores"
     },
@@ -685,7 +744,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Computadores5,
+        mainImage: Computadores5,
+        images: [Computadores5, Computadores5, Computadores5],
         price: "R$ 2199,00",
         category: "Computadores"
     },
@@ -695,7 +755,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Computadores6,
+        mainImage: Computadores6,
+        images: [Computadores6, Computadores6, Computadores6],
         price: "R$ 1750,00",
         category: "Computadores"
     },
@@ -705,7 +766,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Tablets1,
+        mainImage: Tablets1,
+        images: [Tablets1, Tablets1, Tablets1],
         price: "R$ 699,00",
         category: "Tablets"
     },
@@ -715,7 +777,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Tablets2,
+        mainImage: Tablets2,
+        images: [Tablets2, Tablets2, Tablets2],
         price: "R$ 549,90",
         category: "Tablets"
     },
@@ -725,7 +788,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Tablets3,
+        mainImage: Tablets3,
+        images: [Tablets3, Tablets3, Tablets3],
         price: "R$ 536,00",
         category: "Tablets"
     },
@@ -735,7 +799,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Tablets4,
+        mainImage: Tablets4,
+        images: [Tablets4, Tablets4, Tablets4],
         price: "R$ 599,00",
         category: "Tablets"
     },
@@ -745,7 +810,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Tablets5,
+        mainImage: Tablets5,
+        images: [Tablets5, Tablets5, Tablets5],
         price: "R$ 999,90",
         category: "Tablets"
     },
@@ -755,7 +821,8 @@ export const CardProducts = [
         rating: '(1295)',
         priceOld: 'R$ 999,00',
         discount: 'Desconto 23%',
-        images: Tablets6,
+        mainImage: Tablets6,
+        images: [Tablets6, Tablets6, Tablets6],
         price: "R$ 490,00",
         category: "Tablets"
     },

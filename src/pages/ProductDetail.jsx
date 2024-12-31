@@ -1,42 +1,31 @@
-// src/components/ProductDetail/ProductDetail.jsx
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import './ProductDetail.css';
-import Roupas1 from '../assets/products/roupas/roupas-01.png';
+import { CardProducts } from '../../src/data/data'; // Importa os produtos
 
 const ProductDetail = () => {
-    const [selectedImage, setSelectedImage] = useState(Roupas1);
+    const { id } = useParams(); // Obtém o ID da URL
+    const product = CardProducts.find(item => item.id === parseInt(id)); // Encontra o produto pelo ID
 
-    const product = {
-        title: "Smartphone Motorola Moto G24 Grafite 128GB, 4GB + 4GB RAM Boost",
-        description: "Tela de 6.6', Câmera Dupla, Dolby Atmos, Android 14 e Processador Octa-core",
-        priceOld: "R$ 999,00",
-        discount: "24%",
-        price: "R$ 649,00",
-        pixDiscount: "No Pix com 15% de desconto",
-        installment: "7x de R$ 109,08",
-        rating: 5.0,
-        reviews: 2816,
-        questions: 114,
-        images: [
-            Roupas1,
-            Roupas1,
-            Roupas1,
-            Roupas1,
-            Roupas1,
-        ],
-    };
+    if (!product) {
+        return <p>Produto não encontrado!</p>; // Caso o produto não exista
+    }
+
+    // Gerenciar a imagem principal selecionada
+    const [selectedImage, setSelectedImage] = useState(product.images[0]);
 
     return (
         <div className="product-detail-container">
             <div className="product-header">
                 <h1>{product.title}</h1>
-                <p>{product.description}</p>
+                <p>Categoria: {product.category}</p>
             </div>
 
             <div className="product-content">
+                {/* Imagens do produto */}
                 <div className="product-images">
                     <div className="main-image">
-                        <img src={selectedImage} alt="Produto Principal" />
+                        <img src={selectedImage} alt={product.title} />
                     </div>
                     <div className="image-thumbnails">
                         {product.images.map((image, index) => (
@@ -51,27 +40,21 @@ const ProductDetail = () => {
                     </div>
                 </div>
 
+                {/* Informações do produto */}
                 <div className="product-info">
                     <div className="rating">
-                        <p>⭐⭐⭐⭐⭐ {product.rating} ({product.reviews} avaliações)</p>
-                        <p>{product.questions} perguntas</p>
+                        <p>⭐⭐⭐⭐⭐ {product.rating} avaliações</p>
                     </div>
                     <div className="price">
-                        <div className='old-discount'>
+                        <div className="old-discount">
                             <p className="old-price">{product.priceOld}</p>
-                            <p className="discount">Baixou {product.discount}</p>
+                            <p className="discount">{product.discount}</p>
                         </div>
-                        <div className='price-origin'>
-                            <h3>{product.price}</h3>
-                        </div>
-                        <div className='pix-parcel'>
-                            <p>{product.pixDiscount}</p>
-                            <p>{product.installment} sem juros</p>
-                        </div>
+                        <h3 className="current-price">{product.price}</h3>
                     </div>
                     <button className="buy-button">Comprar</button>
                     <div className="frete-container">
-                        <p>Calcule o frete e prazo de entrega</p>
+                        <p>Calcule o frete e prazo de entrega:</p>
                         <input type="text" placeholder="Digite o CEP" />
                         <button>Consultar</button>
                     </div>

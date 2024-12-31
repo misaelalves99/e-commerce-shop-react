@@ -23,7 +23,6 @@
     margin: auto;
     padding-left: 40px;
     padding-right: 40px;
-    
 }
 
 @media (max-width: 1280px) {
@@ -66,7 +65,7 @@
     max-width: 250px;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start; /* Align to left */
 }
 
 .name-company {
@@ -90,6 +89,7 @@
 .desc-company {
     font-size: .9rem;
     color: white;
+    text-align: left; /* Align text to the left */
 }
 
 .social-media-footer {
@@ -112,11 +112,13 @@
 .location-f {
     display: flex;
     padding-bottom: 20px;
+    text-align: left; /* Align text to the left */
 }
 
 .contact-f {
     display: flex;
     padding-bottom: 20px;
+    text-align: left; /* Align text to the left */
 }
 
 .icon-cl {
@@ -140,7 +142,7 @@
 .about-us-service {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Align to left */
 }
 
 .about-us {
@@ -150,6 +152,7 @@
 .about-us h1 {
     color: white;
     font-size: 1.3rem;
+    text-align: left; /* Align text to the left */
 }
 
 .about-us ul {
@@ -161,6 +164,7 @@
     color: white;
     margin-top: 5px;
     margin-bottom: 5px;
+    text-align: left; /* Align text to the left */
 }
 
 .about-us ul li:hover {
@@ -174,6 +178,7 @@
 .service h1 {
     color: white;
     font-size: 1.3rem;
+    text-align: left; /* Align text to the left */
 }
 
 .service ul {
@@ -185,6 +190,7 @@
     color: white;
     margin-top: 5px;
     margin-bottom: 5px;
+    text-align: left; /* Align text to the left */
 }
 
 .service ul li:hover {
@@ -194,12 +200,14 @@
 .our-app {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Align to left */
 }
+
 .our-app h1 {
     color: white;
     font-size: 1.3rem;
     margin-bottom: 15px;
+    text-align: left; /* Align text to the left */
 }
 
 .apps {
@@ -214,7 +222,7 @@
     background-color: rgb(69, 69, 69);
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-start; /* Align to left */
     align-items: center;
 }
 
@@ -225,6 +233,7 @@
 .icon-app {
     font-size: 1.9rem;
     color: white;
+    margin-right: 10px; /* Space between icon and text */
 }
 
 .app h3 {
