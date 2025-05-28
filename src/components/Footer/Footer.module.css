@@ -1,0 +1,292 @@
+/* Footer.module.css */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  background-color: #1A1A1A;
+  color: #FFFFFF; /* Ensure all text within footer is white by default */
+}
+
+.containerFooter {
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 80px;
+  justify-content: space-between;
+  margin: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media (max-width: 1280px) {
+  .containerFooter {
+    max-width: 1024px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .containerFooter {
+    max-width: 768px;
+    gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ourApp {
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .containerFooter {
+    max-width: 576px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .contactCompany {
+    margin-bottom: 40px;
+  }
+
+  .aboutUsService {
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+}
+
+.contactCompany {
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nameCompany {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.nameCompany .iconCC {
+  font-size: 2rem;
+  color: white;
+}
+
+.nameCompany h2 {
+  color: white;
+  font-size: 1.3rem; /* Seems to be a good match for the image */
+  margin-left: 15px; /* Slightly reduced margin to match image */
+}
+
+.descCompany {
+  font-size: .9rem;
+  color: white;
+  text-align: left;
+  line-height: 1.6; /* Added line height for better readability, matching image */
+}
+
+.socialMediaFooter {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.iconSm {
+  font-size: 2rem;
+  color: white;
+  padding-right: 5px; /* Reduced padding for a tighter look */
+  padding-left: 5px; /* Reduced padding for a tighter look */
+  margin: 0 5px; /* Added margin for consistent spacing */
+}
+
+.iconSm:hover {
+  color: rgb(255, 72, 0);
+}
+
+.locationF {
+  display: flex;
+  padding-bottom: 10px; /* Reduced padding to bring closer to next element */
+  text-align: left;
+  align-items: flex-start; /* Align icon and text at the top */
+}
+
+.contactF {
+  display: flex;
+  padding-bottom: 20px;
+  text-align: left;
+  align-items: flex-start; /* Align icon and text at the top */
+}
+
+.iconCl {
+  color: white;
+  font-size: 1.2rem; /* Adjusted icon size to match image */
+  margin-right: 10px; /* Space between icon and text */
+  margin-top: 2px; /* Small adjustment for vertical alignment */
+}
+
+.locationF h3,
+.contactF h3 {
+  font-size: 1rem;
+  color: white;
+  padding-right: 0; /* Remove extra padding */
+  padding-left: 0; /* Remove extra padding */
+  margin: 0; /* Remove default margin */
+}
+
+.aboutUsService {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.aboutUs {
+  margin-bottom: 20px;
+}
+
+.aboutUs h1 {
+  color: white;
+  font-size: 1.3rem; /* Consistent with other titles */
+  text-align: left;
+  margin-bottom: 15px; /* Adjusted spacing */
+}
+
+.aboutUs ul {
+  margin-top: 0; /* Remove default margin */
+  padding-left: 0; /* Remove default padding for list */
+  list-style: none; /* Remove bullet points */
+}
+
+.aboutUs ul li {
+  font-size: .9rem;
+  color: white;
+  margin-top: 8px; /* Adjusted spacing */
+  margin-bottom: 8px; /* Adjusted spacing */
+  text-align: left;
+}
+
+.aboutUs ul li:hover {
+  color: rgb(255, 72, 0);
+}
+
+.service {
+  margin-top: 0; /* Adjusted spacing */
+}
+
+.service h1 {
+  color: white;
+  font-size: 1.3rem; /* Consistent with other titles */
+  text-align: left;
+  margin-bottom: 15px; /* Adjusted spacing */
+}
+
+.service ul {
+  margin-top: 0; /* Remove default margin */
+  padding-left: 0; /* Remove default padding for list */
+  list-style: none; /* Remove bullet points */
+}
+
+.service ul li {
+  font-size: .9rem;
+  color: white;
+  margin-top: 8px; /* Adjusted spacing */
+  margin-bottom: 8px; /* Adjusted spacing */
+  text-align: left;
+}
+
+.service ul li:hover {
+  color: rgb(255, 72, 0);
+}
+
+.ourApp {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ourApp h1 {
+  color: white;
+  font-size: 1.3rem; /* Consistent with other titles */
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.apps {
+  margin-top: 0; /* Adjusted spacing */
+  display: flex;
+  flex-direction: column; /* Stack apps vertically */
+  gap: 15px; /* Space between app buttons */
+}
+
+.app {
+  padding: 10px 20px; /* Increased horizontal padding for app buttons */
+  border-radius: 8px; /* Sharper corners to match image */
+  background-color: rgb(69, 69, 69);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 170px; /* Set a fixed width for the buttons to match image */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+.app:hover {
+  background-color: rgb(255, 72, 0);
+  cursor: pointer; /* Add pointer cursor on hover */
+}
+
+.iconApp {
+  font-size: 1.9rem;
+  color: white;
+  margin-right: 15px; /* Increased margin for icon */
+}
+
+.app h3 {
+  font-size: 1.1rem; /* Slightly smaller font size for "App Store" text */
+  color: white;
+  margin: 0; /* Remove default margin */
+}
+
+.copyright {
+  background-color: rgb(35, 35, 35);
+  margin-top: 50px;
+  padding: 15px 0; /* Increased padding for copyright section */
+}
+
+.containerCopyright {
+  max-width: 1500px;
+  font-size: 1rem;
+  padding-left: 40px;
+  padding-right: 40px;
+  color: white;
+  text-align: center;
+  margin: auto; /* Center the container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerCopyright p {
+  margin-top: 5px; /* Adjusted margin */
+  margin-bottom: 5px; /* Adjusted margin */
+  font-size: .9rem;
+  line-height: 1.5; /* Added line height for better readability */
+}
+
+@media (max-width: 768px) {
+  .containerCopyright p {
+    font-size: .8rem;
+  }
+}
+
+.containerCopyright a {
+  color: white;
+  text-decoration: none; /* Removed underline by default to match image */
+}
+
+.containerCopyright a:hover { /* Corrected the hover selector */
+  color: rgb(255, 72, 0);
+  text-decoration: underline; /* Add underline on hover */
+}
