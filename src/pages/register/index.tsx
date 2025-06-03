@@ -1,9 +1,11 @@
+// src/pages/register/index.tsx
+
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import bcrypt from "bcryptjs";
 import { FaGoogle, FaFacebookF } from "react-icons/fa";
 import styles from "./Register.module.css";
-import { FormData, User } from "../../types/auth";  // import das interfaces
+import { FormData, User } from "../../types/auth";
 
 const Register: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({

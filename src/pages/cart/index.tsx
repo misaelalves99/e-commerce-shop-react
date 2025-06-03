@@ -1,4 +1,4 @@
-// src/pages/CartPage/CartPage.tsx
+// src/pages/cart/index.tsx
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
@@ -7,12 +7,7 @@ import styles from "./Cart.module.css";
 import { FaPlus, FaMinus, FaTrash } from "react-icons/fa";
 
 const CartPage: React.FC = () => {
-  const {
-    cart,
-    increaseQuantity,
-    decreaseQuantity,
-    removeFromCart,
-  } = useCart(); // ✅ Hook do cart context
+  const { cart, increaseQuantity, decreaseQuantity, removeFromCart, } = useCart();
 
   const navigate = useNavigate();
 

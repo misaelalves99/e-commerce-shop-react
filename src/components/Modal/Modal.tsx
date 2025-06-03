@@ -1,6 +1,7 @@
 // src/components/Modal/Modal.tsx
+
 import React from 'react';
-import { Link } from 'react-router-dom'; // Substituto para o Link do Next.js
+import { Link } from 'react-router-dom';
 import { MdExitToApp } from 'react-icons/md';
 import styles from './Modal.module.css';
 

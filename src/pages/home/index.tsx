@@ -1,4 +1,5 @@
-// src/pages/Home.tsx
+// src/pages/home/index.tsx
+
 import React from "react";
 
 import Advertising from "../../components/Home/Advertising/Advertising";

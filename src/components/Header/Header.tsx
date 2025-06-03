@@ -1,4 +1,5 @@
 // src/components/Header/Header.tsx
+
 import React, { useState, useEffect, useRef } from 'react';
 import { FaSearch, FaCartPlus, FaUser } from 'react-icons/fa';
 import { MdFavorite } from 'react-icons/md';

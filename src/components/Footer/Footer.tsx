@@ -1,4 +1,5 @@
 // src/components/Footer/Footer.tsx
+
 import { FaShoppingBag, FaLinkedin, FaGithub, FaInstagram, FaFacebook, FaPhoneVolume, FaAppStoreIos, FaGooglePlay } from 'react-icons/fa';
 import { TbLocationFilled } from 'react-icons/tb';
 import styles from './Footer.module.css';

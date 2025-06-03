@@ -47,7 +47,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
         <div className={styles.rating}>
           {Array.from({ length: 5 }, (_, index) => (
-            <FaStar key={index} color={index < product.rating ? "#f39c12" : "#ddd"} />
+            <FaStar key={index} color={index < (product.rating || 0) ? "#f39c12" : "#ddd"} />
           ))}
         </div>
 
@@ -55,6 +55,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           {product.priceOld && (
             <span className={styles.priceOld}>R${Number(product.priceOld).toFixed(2)}</span>
           )}
+
           {discountValue !== null && (
             <span className={styles.discount}>-{discountValue}%</span>
           )}

@@ -1,3 +1,5 @@
+// src/types/react-typical.d.ts
+
 declare module 'react-typical' {
   import * as React from 'react';
 

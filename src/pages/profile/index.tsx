@@ -1,4 +1,5 @@
-// src/pages/Profile.tsx
+// src/pages/profile/index.tsx
+
 import React, { useState, useEffect, ChangeEvent } from "react";
 import styles from "./Profile.module.css";
 import { UserData } from "../../types/User";

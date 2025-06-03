@@ -1,13 +1,13 @@
-// src/pages/Favorites/FavoritesPage.tsx
+// src/pages/favorites/index.tsx
 
 import React from "react";
-import { useFavorites } from "../../hooks/useFavorites"; // ✅ Conecta ao contexto correto
+import { useFavorites } from "../../hooks/useFavorites";
 import { Product as ProductType } from "../../types/product";
 import styles from "./Favorites.module.css";
 import ProductCard from "../../components/ProductCard/ProductCard";
 
 const FavoritesPage: React.FC = () => {
-  const { favorites } = useFavorites(); // ✅ Usando hook do contexto de favoritos
+  const { favorites } = useFavorites();
 
   return (
     <div className={styles.favoritesContainer}>

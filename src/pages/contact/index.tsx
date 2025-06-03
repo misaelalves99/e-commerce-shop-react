@@ -1,4 +1,4 @@
-// src/pages/Contact.tsx  (ou qualquer estrutura que você use em React)
+// src/pages/contact/index.tsx
 
 import React from "react";
 import Form from "../../components/Form/Form";

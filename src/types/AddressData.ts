@@ -1,3 +1,4 @@
+// src/types/AddressData.ts
 export interface AddressData {
   street: string;
   neighborhood: string;

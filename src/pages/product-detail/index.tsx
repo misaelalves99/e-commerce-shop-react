@@ -1,6 +1,8 @@
+// src/pages/product-detail/index.tsx
+
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { CardProducts } from "../../api/products";  // Array de produtos já no formato Product[]
+import { CardProducts } from "../../api/products";
 import styles from "./ProductDetail.module.css";
 import { Product, ImageObj } from "../../types/product";
 

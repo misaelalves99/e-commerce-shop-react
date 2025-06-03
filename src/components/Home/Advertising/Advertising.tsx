@@ -1,4 +1,5 @@
 // src/components/Home/Advertising/Advertising.tsx
+
 import React from 'react';
 import styles from './Advertising.module.css';
 import Typical from 'react-typical';
@@ -26,7 +27,7 @@ const Advertising: React.FC = () => {
         </div>
         <div className={styles.imgAdvertising}>
           <img 
-            src="/assets/img-propaganda.png" // Certifique-se de que o caminho seja relativo à `public` ou `public/assets` do React
+            src="/assets/img-propaganda.png"
             alt="Publicidade - Desconto" 
             width={500} 
             height={500} 

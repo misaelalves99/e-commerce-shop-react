@@ -1,6 +1,8 @@
+// src/pages/address/index.tsx
+
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import styles from "./Address.module.css";
-import { AddressData } from "../../types/AddressData"; // ajuste o caminho conforme sua estrutura
+import { AddressData } from "../../types/AddressData";
 
 const Address: React.FC = () => {
   const [address, setAddress] = useState<AddressData>({

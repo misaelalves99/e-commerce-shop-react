@@ -1,3 +1,5 @@
+// src/types/auth.ts
+
 export interface FormData {
   email: string;
   password: string;

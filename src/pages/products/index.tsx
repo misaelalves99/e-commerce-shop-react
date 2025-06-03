@@ -1,3 +1,5 @@
+// src/pages/products/index.tsx
+
 import React, { useState, useEffect } from "react";
 import { CardCategories, CardProducts } from "../../api/products";
 import { Product as ProductType } from "../../types/product";

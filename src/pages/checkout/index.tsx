@@ -1,4 +1,4 @@
-// src/pages/Checkout/CheckoutPage.tsx
+// src/pages/checkout/index.tsx
 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +7,7 @@ import styles from "./Checkout.module.css";
 import { FaArrowLeft } from "react-icons/fa";
 
 const CheckoutPage: React.FC = () => {
-  const { cart } = useCart(); // ✅ Usa CartContext
+  const { cart } = useCart();
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({

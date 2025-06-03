@@ -1,3 +1,5 @@
+// src/types/Favorites.ts
+
 import { Product as ProductType } from "../types/product";
 
 export interface FavoritesContextType {
